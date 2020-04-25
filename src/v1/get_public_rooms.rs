@@ -1,5 +1,7 @@
 //! [GET /_matrix/federation/v1/publicRooms](https://matrix.org/docs/spec/server_server/r0.1.3#get-matrix-federation-v1-publicrooms)
 
+use std::fmt;
+
 use js_int::UInt;
 use ruma_api::ruma_api;
 use ruma_identifiers::{RoomAliasId, RoomId};
@@ -8,7 +10,6 @@ use serde::{
     ser::SerializeStruct,
     Deserialize, Deserializer, Serialize, Serializer,
 };
-use std::fmt;
 
 ruma_api! {
     metadata {

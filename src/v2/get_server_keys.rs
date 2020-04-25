@@ -1,9 +1,9 @@
 //! [GET /_matrix/key/v2/server](https://matrix.org/docs/spec/server_server/r0.1.3#get-matrix-key-v2-server-keyid)
 
+use std::{collections::BTreeMap, time::SystemTime};
+
 use ruma_api::ruma_api;
 use serde::{Deserialize, Serialize};
-use std::collections::BTreeMap;
-use std::time::SystemTime;
 
 ruma_api! {
     metadata {
