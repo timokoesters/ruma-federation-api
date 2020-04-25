@@ -18,6 +18,9 @@ ruma_api! {
     request {}
 
     response {
+        // Spec is wrong, all fields are required (see
+        // https://github.com/matrix-org/matrix-doc/issues/2508)
+
         /// DNS name of the homeserver.
         pub server_name: String,
         /// Public keys of the homeserver for verifying digital signatures.
