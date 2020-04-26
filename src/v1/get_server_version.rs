@@ -17,7 +17,8 @@ ruma_api! {
 
     response {
         /// Information about the homeserver implementation
-        pub server: Server,
+        #[serde(skip_serializing_if = "Option::is_none")]
+        pub server: Option<Server>,
     }
 }
 
